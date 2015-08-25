@@ -1,6 +1,7 @@
 import math
 import pdb
 def main():
+	function = int(input("Enter 1 for 1 input mode, 2 for 2 input mode"))
 	spiralSize = int(input("Spiral size: "))
 	pointNum = int(input("Point Number: "))
 	midPoint = math.ceil(spiralSize/2)
@@ -44,19 +45,4 @@ def main():
 
 main()
 
-
-
-#c  , c
-#c+1, c
-#c+1, c-1
-#c  , c-1
-#c-1, c-1
-#c-1, c
-#c-1, c+1
-#c, c+1
-#c+1, c+1
-#c+2, c+1
-#c+2, c
-#c+2, c-1
-#c+2, c-2
 
