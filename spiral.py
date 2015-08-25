@@ -1,9 +1,9 @@
 import math
 import pdb
 def main():
-	function = int(input("Enter 1 for 1 input mode, 2 for 2 input mode"))
 	spiralSize = int(input("Spiral size: "))
-	pointNum = int(input("Point Number: "))
+	pointNum = int(input("Point Number (-1 to ignore): "))
+	pointLoc = [int(numeric_string) for numeric_string in input("Point Location (-1 to ignore): ").split()]
 	midPoint = math.ceil(spiralSize/2)
 	currPointLoc = [midPoint, midPoint]
 	currPointIndex = 1
@@ -16,6 +16,8 @@ def main():
 	while abs(radius) < math.ceil(spiralSize/2):
 		if currPointIndex == pointNum:
 			print(currPointLoc)
+		if currPointLoc == (pointLoc):
+			print(currPointIndex)
 		if(right == True): #if we're moving right
 			currPointLoc[0] += 1 #increment X
 			if currPointLoc[0] > midPoint + abs(radius): #if we're as far right as we should be
