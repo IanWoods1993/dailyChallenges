@@ -91,3 +91,9 @@ double calculatePath(Point p0, Point p1, Point p2, Point p3)
 	}
 	return(pathLength);
 }
+
+/* Note - I understand latitude and longitude traditionally
+necessitates a spherical coordinate system, but given that for
+a reasonable distance the difference between spherical and
+traditional Cartesian coordinates is quite small, I decided to
+use Cartesian coordinates for simplicity */
