@@ -1,14 +1,21 @@
 import sys
 def main():
-	words = str(open("enable1.txt").readlines()).rstrip('\n')
-	print(words)
+	words = open("enable1.txt").readlines()
+	wordList = []
+	for word in words:
+		wordList.append(word.strip('\n'))
 	numLines = int(input())
 	keys = []
 	for i in range(0, numLines):
 		keys.append(input())
-
-	for element in keys:
-		letters = set(list(element))
-		print(letters)
+	for key in keys:
+		longestWord = ""
+		lettersInKey = set(key)
+		for word in wordList:
+			lettersInWord = set(word)
+			if lettersInWord.issubset(lettersInKey) and len(longestWord) < len(word):
+				longestWord = word
+		print(key, longestWord)
+			
 
 main()
